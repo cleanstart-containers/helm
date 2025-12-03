@@ -70,14 +70,14 @@ docker pull --platform linux/arm64 cleanstart/helm:latest
 ```
 
 **
-### Resources & Documentation  
-Essential links and resources for further information:
+### 
+### Resources
 
-- CleanStart Website: https://www.cleanstart.com
+- Official Documentation: https://helm.sh/docs/
 - View Provenance, Specifications, SBOM, Signature at: https://images.cleanstart.com/images/helm
+- Docker Hub: https://hub.docker.com/r/cleanstart/helm
 - CleanStart All Images: https://images.cleanstart.com
-- CleanStart Community Images: https://hub.docker.com/u/cleanstart
-- Other location for Community image: https://hub.docker.com/r/cleanstart/helm
+- CleanStart All Community Images: https://hub.docker.com/u/cleanstart
 
 ---
 
