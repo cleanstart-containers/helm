@@ -34,30 +34,30 @@ Typical scenarios where this container excels:
 
 Download the runtime container images:
 ```bash
-docker pull cleanstart/helm:latest
-docker pull cleanstart/helm:latest-dev
+docker pull ghcr.io/cleanstart-containers/helm:latest
+docker pull ghcr.io/cleanstart-containers/helm:latest-dev
 ```
 
 ### Quick Start
 
 Display Helm version and help:
 ```bash
-docker run --rm cleanstart/helm:latest-dev version
-docker run --rm cleanstart/helm:latest-dev --help
+docker run --rm ghcr.io/cleanstart-containers/helm:latest-dev version
+docker run --rm ghcr.io/cleanstart-containers/helm:latest-dev --help
 ```
 
 ### Create a New Chart
 
 Generate a new Helm chart:
 ```bash
-docker run --rm -v $(pwd)/my-chart:/workspace cleanstart/helm:latest-dev create /workspace/my-app
+docker run --rm -v $(pwd)/my-chart:/workspace ghcr.io/cleanstart-containers/helm:latest-dev create /workspace/my-app
 ```
 
 ### Interactive Development
 
 Start interactive session for development:
 ```bash
-docker run --rm -it --entrypoint /bin/sh cleanstart/helm:latest-dev
+docker run --rm -it --entrypoint /bin/sh ghcr.io/cleanstart-containers/helm:latest-dev
 ```
 
 ### Kubernetes Integration
@@ -66,7 +66,7 @@ Connect to Kubernetes cluster with kubeconfig:
 ```bash
 docker run --rm \
   -v ~/.kube:/home/clnstrt/.kube:ro \
-  cleanstart/helm:latest-dev list
+  ghcr.io/cleanstart-containers/helm:latest-dev list
 ```
 
 ---
@@ -85,8 +85,8 @@ docker run --rm \
 
 ### Multi-Platform Images
 ```bash
-docker pull --platform linux/amd64 cleanstart/helm:latest
-docker pull --platform linux/arm64 cleanstart/helm:latest
+docker pull --platform linux/amd64 ghcr.io/cleanstart-containers/helm:latest
+docker pull --platform linux/arm64 ghcr.io/cleanstart-containers/helm:latest
 ```
 
 ---
