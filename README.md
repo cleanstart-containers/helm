@@ -50,6 +50,8 @@ docker run --rm ghcr.io/cleanstart-containers/helm:latest-dev --help
 
 Generate a new Helm chart:
 ```bash
+sudo chown -R $USER:$USER my-chart
+
 docker run --rm -v $(pwd)/my-chart:/workspace ghcr.io/cleanstart-containers/helm:latest-dev create /workspace/my-app
 ```
 
