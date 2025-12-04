@@ -67,6 +67,7 @@ docker run --rm -it --entrypoint /bin/sh ghcr.io/cleanstart-containers/helm:late
 Connect to Kubernetes cluster with kubeconfig:
 ```bash
 docker run --rm \
+  --network host \
   -v ~/.kube:/home/clnstrt/.kube:ro \
   ghcr.io/cleanstart-containers/helm:latest-dev list
 ```
