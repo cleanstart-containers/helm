@@ -20,6 +20,11 @@ spec:
           - "search"
           - "hub"
           - "nginx"
+          # - "help"
+          # - "repo"
+          # - "add"
+          # - "bitnami"
+          # - "https://charts.bitnami.com/bitnami"
                   
         securityContext:
           runAsUser: 1000
