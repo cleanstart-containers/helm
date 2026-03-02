@@ -50,6 +50,8 @@ docker run --rm ghcr.io/cleanstart-containers/helm:latest-dev --help
 
 Generate a new Helm chart:
 ```bash
+sudo chown -R $USER:$USER my-chart
+
 docker run --rm -v $(pwd)/my-chart:/workspace ghcr.io/cleanstart-containers/helm:latest-dev create /workspace/my-app
 ```
 
@@ -65,6 +67,7 @@ docker run --rm -it --entrypoint /bin/sh ghcr.io/cleanstart-containers/helm:late
 Connect to Kubernetes cluster with kubeconfig:
 ```bash
 docker run --rm \
+  --network host \
   -v ~/.kube:/home/clnstrt/.kube:ro \
   ghcr.io/cleanstart-containers/helm:latest-dev list
 ```

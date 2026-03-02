@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helm-create-chart
+  namespace: helm-test
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: helm
+        image: cleanstart/helm:latest-dev
+        command: ["helm"]
+        args:
+          - "create"
+          - "/tmp/my-app"
+        volumeMounts:
+        - name: workspace
+          mountPath: /tmp
+        securityContext:
+          runAsUser: 1000
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+      volumes:
+      - name: workspace
+        emptyDir: {}
